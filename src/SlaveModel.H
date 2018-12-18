@@ -17,40 +17,10 @@
  * \date       Nov 21 2012
  * \author     Miguel Luis
  */
-#ifdef MasterModel
-	#include "MasterModel.h"
-#endif
-#ifdef SlaveModel
-	#include "SlaveModel.h"
-#endif
-void main_Server( void );
-/*
- * Main application entry point.
- */
-int main( void )
-{
-#ifdef MasterModel
-		MasterModel_Configuration();
-#else
-		SlaveModel_Configuration();
-#endif
-	while(1)
-	{
-		main_Server();
-	}
-}
+ #ifndef __SlaveModel_H
+ #define __SlaveModel_H
 
+int SlaveModel_Configuration( void );
+int SlaveModel_Server( void );
 
-/*
- * Manages the master operation
- */
-void main_Server( void )
-{
-	#ifdef MasterModel
-		MasterModel_Server();
-#else
-		SlaveModel_Server();
 #endif
-}
-
-

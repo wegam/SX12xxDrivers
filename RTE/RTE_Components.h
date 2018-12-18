@@ -4,7 +4,7 @@
  *      *** Do not modify ! ***
  *
  * Project: 'SX12xxDrivers' 
- * Target:  'Target 1' 
+ * Target:  'SlaveModel' 
  */
 
 #ifndef RTE_COMPONENTS_H
